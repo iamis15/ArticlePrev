@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210, 46%, 95%);
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  background-color: white;
+  border-radius: 1rem;
+  width: 800px;
+  height: 300px;
+}
+
+.main > img {
+  width: 40%;
+  height: 100%;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 1rem;
+  color: hsl(217, 19%, 35%);
+}
+
+.content > h1 {
+  font-size: 1.8rem;
+}
+
+.content p {
+  color: hsl(214, 17%, 51%);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  gap: 1rem;
+}
+
+.profile > img:not(.share) {
+  height: 100%;
+  width: 10%;
+  border-radius: 2rem;
+}
+
+.credentials {
+  width: 75%;
+  align-items: center;
+}
+
+.share {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  width: 8%;
+  border-radius: 2rem;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.share:hover {
+  cursor: pointer;
+}
+
+.shareopt {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -70px;
+  gap: 1rem;
+  width: 250px;
+  height: 55px;
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 1rem;
+}
+
+.shareopt p {
+  color: hsl(212, 23%, 69%);
+  letter-spacing: 0.1rem;
+}
+
+.shareopt img {
+  width: 10%;
+  height: 40%;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid hsl(217, 19%, 35%);
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    flex-direction: column;
+    width: 90vw;
+    height: fit-content;
+  }
+
+  .main > img {
+    width: 100%;
+    height: 400px;
+    max-height: 90vh;
+    object-fit: cover;
+  }
+
+  .profile {
+    position: relative;
+  }
+  .share {
+    position: static;
+  }
+
+  .shareopt {
+    left: -39px;
+    justify-content: space-between;
+    padding: 0 4rem;
+    top: 50px;
+    width: 90vh;
+    border-radius: 0 0 1rem 1rem;
+    width: 90vw;
+  }
+
+  .shareopt img {
+    width: 5%;
+    height: 40%;
+  }
+
+  .arrow-down {
+    display: none;
+  }
+}
